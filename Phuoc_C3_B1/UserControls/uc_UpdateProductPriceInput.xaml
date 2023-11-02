@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="Phuoc_C3_B1.UserControls.uc_UpdateProductPriceInput"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Phuoc_C3_B1.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="800">
+
+    <StackPanel Width="200">
+        <StackPanel>
+            <StackPanel>
+                <Label Content="Product"/>
+                <ComboBox ItemsSource="{Binding Path=Products, Mode=OneWay}"
+                          SelectedItem="{Binding Path=SelectedProduct, Mode=TwoWay}"
+                          DisplayMemberPath="Name"
+                          Padding="5 6 5 6"/>
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Current input price"/>
+                <TextBox Text="{Binding Path=SelectedProduct.PriceInput, Mode=OneWay}"
+                         IsEnabled="False"
+                         Style="{StaticResource tb}"/>
+            </StackPanel>
+            <StackPanel>
+                <Label Content="New price"/>
+                <TextBox Name="tb_price"
+                         Style="{StaticResource tb}"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Margin="0 30 0 0" Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Padding" Value="20 5 20 5"/>
+                </Style>
+            </StackPanel.Resources>
+
+            <Button Name="btn_save"
+                    Content="Save"
+                    Style="{StaticResource btn_primary}"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

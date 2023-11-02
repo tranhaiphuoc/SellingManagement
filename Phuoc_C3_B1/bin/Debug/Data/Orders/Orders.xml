@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Orders>
+  <Order Id="HD1" Username="user" Quantity="2" Total="70000" CreatedAt="27/06/2023 10:45:53 PM" CustomerName="12" SSN="12" Phone="12">
+    <Detail ProductId="F0023" PriceOutput="35000" Quantity="2" />
+  </Order>
+  <Order Id="HD2" Username="user" Quantity="1" Total="2450000" CreatedAt="01/07/2023 12:46:02 AM" CustomerName="1" SSN="12" Phone="123">
+    <Detail ProductId="E126" PriceOutput="2450000" Quantity="1" />
+  </Order>
+</Orders>

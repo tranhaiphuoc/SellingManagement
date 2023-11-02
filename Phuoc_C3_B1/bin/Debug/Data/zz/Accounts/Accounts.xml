@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Accounts>
+  <Account Username="manager" Password="manager" Role="1" />
+  <Account Username="seller" Password="seller" Role="2" />
+</Accounts>

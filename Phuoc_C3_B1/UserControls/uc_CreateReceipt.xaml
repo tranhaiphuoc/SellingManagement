@@ -1,0 +1,142 @@
+﻿<UserControl x:Class="Phuoc_C3_B1.UserControls.uc_CreateReceipt"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Phuoc_C3_B1.UserControls"
+             xmlns:converters="clr-namespace:Phuoc_C3_B1.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" Width="800">
+
+    <UserControl.Resources>
+        <Style x:Key="MyDataGridCell" TargetType="DataGridCell" BasedOn="{StaticResource {x:Type DataGridCell}}">
+            <Setter Property="Background" Value="White"/>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="Red"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <converters:ConvertToBooleanIfProductIsFood x:Key="ConvertToBoolIfProductIsFood"/>
+    </UserControl.Resources>
+
+    
+    <StackPanel Margin="0 30 0 0">
+        <StackPanel Orientation="Horizontal">
+            <DataGrid Name="dg_receiptDetails"
+                      Width="500"
+                      Height="200"
+                      Margin="0 0 20 0"
+                      ItemsSource="{Binding Path=ReceiptDetails, Mode=OneWay}"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      Style="{StaticResource dg}">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Product's name"
+                                        IsReadOnly="True"
+                                        Width="2*"
+                                        Binding="{Binding Product.Name}"/>
+                    <DataGridTextColumn Header="Price input"
+                                        IsReadOnly="True"
+                                        Width="*"
+                                        Binding="{Binding Product.PriceInput}"/>
+                    <DataGridTextColumn Header="Quantity"
+                                        IsReadOnly="True"
+                                        Width="*"
+                                        Binding="{Binding Quantity}"/>
+                    <DataGridTextColumn Header="Total"
+                                        IsReadOnly="True"
+                                        Width="*"
+                                        Binding="{Binding Total}"/>
+
+                    <DataGridTemplateColumn IsReadOnly="True"
+                                            Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Delete"
+                                        Name="btn_deleteProduct"
+                                        Padding="10 3 10 3"
+                                        Click="btn_deleteProduct_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid ItemsSource="{Binding Path=FoodReceipts, Mode=OneWay}"
+                      Width="280"
+                      AutoGenerateColumns="False"
+                      Style="{StaticResource dg}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id"
+                                        Width="*"
+                                        Binding="{Binding FoodId}"/>
+                    <DataGridTextColumn Header="Receipt id"
+                                        Width="*"
+                                        Binding="{Binding ReceiptId}"/>
+                    <DataGridTextColumn Header="Mfg date"
+                                        Width="*"
+                                        Binding="{Binding MfgDate, StringFormat='{}{0:dd/MM/yyyy}'}"/>
+                    <DataGridTextColumn Header="Exp date"
+                                        Width="*"
+                                        Binding="{Binding ExpDate, StringFormat='{}{0:dd/MM/yyyy}'}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Margin="0 20 55 0">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type ComboBox}">
+                    <Setter Property="Width" Value="180"/>
+                    <Setter Property="Padding" Value="5 6 5 6"/>
+                </Style>
+                <Style TargetType="{x:Type DatePicker}">
+                    <Setter Property="Width" Value="180"/>
+                    <Setter Property="Padding" Value="5"/>
+                </Style>
+            </StackPanel.Resources>
+            
+            <StackPanel Margin="0 0 225 0">
+                <StackPanel>
+                    <Label Content="Product"/>
+                    <ComboBox Name="cb_product"
+                              ItemsSource="{Binding Path=Products, Mode=OneTime}"
+                              SelectedItem="{Binding Path=SelectedProduct, Mode=TwoWay}"
+                              DisplayMemberPath="Name"/>
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Quantity"/>
+                    <TextBox Name="tb_quantity"
+                             Style="{StaticResource tb}"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel IsEnabled="{Binding Path=SelectedProduct, Mode=TwoWay, Converter={StaticResource ConvertToBoolIfProductIsFood}}">
+                <StackPanel>
+                    <Label Content="Mfg date"/>
+                    <DatePicker Name="tb_mfgDate"
+                                SelectedDate="{Binding Path=MfgDate, Mode=TwoWay}"/>
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Exp date"/>
+                    <DatePicker Name="tb_expDate"
+                                SelectedDate="{Binding Path=ExpDate, Mode=TwoWay}"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal"
+                    Margin="158 35 0 0">
+            <Button Name="btn_add"
+                    Content="Add"                
+                    Style="{StaticResource btn_primary}"/>
+            <Button Name="btn_save"
+                    Content="Save"
+                    Margin="25 0 0 0"
+                    Style="{StaticResource btn_secondary}"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

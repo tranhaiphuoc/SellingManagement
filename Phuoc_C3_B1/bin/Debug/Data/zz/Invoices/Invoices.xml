@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Invoices>
+  <Invoice Id="PXK1" Username="manager" Quantity="4" Total="9800000" CreatedAt="24/04/2023 3:29:55 AM">
+    <Detail ProductId="E126" PriceOutput="2450000" Quantity="4" />
+  </Invoice>
+  <Invoice Id="PXK2" Username="manager" Quantity="5" Total="175000" CreatedAt="24/04/2023 10:24:52 PM">
+    <Detail ProductId="F0023" PriceOutput="35000" Quantity="5" />
+  </Invoice>
+  <Invoice Id="PXK3" Username="manager" Quantity="1" Total="2450000" CreatedAt="24/04/2023 10:26:10 PM">
+    <Detail ProductId="E126" PriceOutput="2450000" Quantity="1" />
+  </Invoice>
+</Invoices>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Receipts>
+  <Receipt Id="PNK1" Username="manager" Quantity="10" Total="17500000" CreatedAt="11/05/2023 9:38:41 PM">
+    <Detail ProductId="E126" PriceInput="1750000" Quantity="5" />
+    <Detail ProductId="E126" PriceInput="1750000" Quantity="5" />
+  </Receipt>
+  <Receipt Id="PNK2" Username="manager" Quantity="15" Total="375000" CreatedAt="11/05/2023 9:39:00 PM">
+    <Detail ProductId="F0023" PriceInput="25000" Quantity="10" />
+    <Detail ProductId="F0023" PriceInput="25000" Quantity="5" />
+  </Receipt>
+</Receipts>

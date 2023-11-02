@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Orders>
+  <Order Id="HD1" Username="seller" Quantity="3" Total="4935000" CreatedAt="25/04/2023 2:17:52 AM" CustomerName="1" SSN="1" Phone="1">
+    <Detail ProductId="E126" PriceOutput="2450000" Quantity="2" />
+    <Detail ProductId="F0023" PriceOutput="35000" Quantity="1" />
+  </Order>
+  <Order Id="HD2" Username="seller" Quantity="3" Total="105000" CreatedAt="25/04/2023 2:52:33 AM" CustomerName="32" SSN="s" Phone="a">
+    <Detail ProductId="F0023" PriceOutput="35000" Quantity="3" />
+  </Order>
+  <Order Id="HD3" Username="seller" Quantity="1" Total="2082500" CreatedAt="25/04/2023 3:24:03 AM" CustomerName="1" SSN="1" Phone="1">
+    <Detail ProductId="E126" PriceOutput="2450000" Quantity="1" />
+  </Order>
+</Orders>

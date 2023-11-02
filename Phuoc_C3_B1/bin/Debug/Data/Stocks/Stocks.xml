@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Stocks>
+  <Stock ProductId="E126" PrevIQ="10" PrevIT="17500000" IQ="2" IT="3500000" ID="25/06/2023 6:14:16 PM" PrevEQ="3" PrevET="7350000" EQ="2" ET="4900000" ED="11/05/2023 9:43:16 PM" Quantity="7" />
+  <Stock ProductId="F0023" PrevIQ="15" PrevIT="375000" IQ="1" IT="25000" ID="25/06/2023 6:14:16 PM" PrevEQ="5" PrevET="175000" EQ="1" ET="35000" ED="25/06/2023 10:38:41 PM" Quantity="10" />
+</Stocks>

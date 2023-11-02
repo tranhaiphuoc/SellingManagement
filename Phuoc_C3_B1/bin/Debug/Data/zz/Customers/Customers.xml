@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Customers>
+  <Customer FullName="1" SSN="1" Phone="1" Point="701750" />
+  <Customer FullName="32" SSN="s" Phone="a" Point="10500" />
+</Customers>

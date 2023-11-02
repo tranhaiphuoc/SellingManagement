@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Products>
+  <Product Id="P30" Name="Binh Co Hue" Producer="Hung Phat" PriceInput="1000000" Material="Dat set" />
+  <Product Id="P980" Name="Chen su Tok" Producer="Thanh Hoai" PriceInput="50000" Material="Dat set" />
+</Products>

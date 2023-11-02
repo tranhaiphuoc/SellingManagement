@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Products>
+  <Product Id="E102" Name="Tai nghe Sony Xperia Z1" Producer="Sony" PriceInput="2050000" Warranty="12" ElectricPower="0" />
+  <Product Id="E126" Name="Loa SoundMax A-8900" Producer="SoundMax" PriceInput="1750000" Warranty="12" ElectricPower="90" />
+</Products>

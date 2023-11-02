@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Receipts>
+  <Receipt Id="PNK1" Username="manager" Quantity="7" Total="175000" CreatedAt="23/04/2023 6:02:30 PM">
+    <Detail ProductId="F0023" PriceInput="25000" Quantity="2" />
+    <Detail ProductId="F0023" PriceInput="25000" Quantity="5" />
+  </Receipt>
+  <Receipt Id="PNK2" Username="manager" Quantity="3" Total="6150000" CreatedAt="23/04/2023 11:58:26 PM">
+    <Detail ProductId="E102" PriceInput="2050000" Quantity="2" />
+    <Detail ProductId="E102" PriceInput="2050000" Quantity="1" />
+  </Receipt>
+  <Receipt Id="PNK3" Username="manager" Quantity="23" Total="25750000" CreatedAt="24/04/2023 3:25:12 AM">
+    <Detail ProductId="E126" PriceInput="1750000" Quantity="10" />
+    <Detail ProductId="P980" PriceInput="50000" Quantity="5" />
+    <Detail ProductId="P30" PriceInput="1000000" Quantity="8" />
+  </Receipt>
+</Receipts>

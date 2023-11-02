@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Availables>
+  <Available ProductId="E126" InStock="2" />
+  <Available ProductId="F0023" InStock="1" />
+</Availables>

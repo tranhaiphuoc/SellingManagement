@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Stocks>
+  <Stock ProductId="E102" PrevQ="5" PrevT="10250000" ImportQ="2" ImportT="4100000" ImportD="26/04/2023 5:34:16 AM" ExportQ="4" ExportT="12464000" ExportD="26/04/2023 5:47:03 AM" Quantity="3" />
+  <Stock ProductId="E126" PrevQ="0" PrevT="0" ImportQ="4" ImportT="7000000" ImportD="25/04/2023 11:04:02 PM" ExportQ="0" ExportT="0" ExportD="01/01/1900 12:00:00 AM" Quantity="4" />
+  <Stock ProductId="P980" PrevQ="0" PrevT="0" ImportQ="15" ImportT="750000" ImportD="25/04/2023 11:04:02 PM" ExportQ="2" ExportT="152000" ExportD="28/04/2023 11:02:14 AM" Quantity="5" />
+  <Stock ProductId="P30" PrevQ="0" PrevT="0" ImportQ="3" ImportT="3000000" ImportD="25/04/2023 11:04:02 PM" ExportQ="2" ExportT="3040000" ExportD="26/04/2023 5:47:03 AM" Quantity="1" />
+</Stocks>

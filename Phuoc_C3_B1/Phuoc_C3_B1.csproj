@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55AD4CF7-5D52-4BDE-8E43-95033C0BE1FB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Phuoc_C3_B1</RootNamespace>
+    <AssemblyName>Phuoc_C3_B1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Converters\ConvertToBooleanIfProductIsFood.cs" />
+    <Compile Include="Interfaces\IDiscount.cs" />
+    <Compile Include="Repositories\AccountRepository.cs" />
+    <Compile Include="Repositories\IRepositoryBase.cs" />
+    <Compile Include="Services\InvoiceService.cs" />
+    <Compile Include="Services\OrderService.cs" />
+    <Compile Include="Services\ProductService.cs" />
+    <Compile Include="Services\ReceiptService.cs" />
+    <Compile Include="Services\StatisticsService.cs" />
+    <Compile Include="Services\StockService.cs" />
+    <Compile Include="UserControls\SaleView\BillForOrderWindow.xaml.cs">
+      <DependentUpon>BillForOrderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SaleView\uc_CheckAvailableStocks.xaml.cs">
+      <DependentUpon>uc_CheckAvailableStocks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SaleView\uc_CreateOrder.xaml.cs">
+      <DependentUpon>uc_CreateOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SaleView\uc_ViewAvailableStocks.xaml.cs">
+      <DependentUpon>uc_ViewAvailableStocks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SaleView\uc_ViewCustomers.xaml.cs">
+      <DependentUpon>uc_ViewCustomers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SaleView\uc_ViewTodayRevenue.xaml.cs">
+      <DependentUpon>uc_ViewTodayRevenue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SaleView\ViewOrderDetailsBy\uc_ViewOrderDetails.xaml.cs">
+      <DependentUpon>uc_ViewOrderDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SaleView\ViewOrderDetailsBy\uc_ViewOrderDetailsByDate.xaml.cs">
+      <DependentUpon>uc_ViewOrderDetailsByDate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SaleView\ViewOrderDetailsBy\uc_ViewOrderDetailsByOrderId.xaml.cs">
+      <DependentUpon>uc_ViewOrderDetailsByOrderId.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uc_CreateInvoice.xaml.cs">
+      <DependentUpon>uc_CreateInvoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uc_CreateReceipt.xaml.cs">
+      <DependentUpon>uc_CreateReceipt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uc_UpdateProductPriceInput.xaml.cs">
+      <DependentUpon>uc_UpdateProductPriceInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uc_ViewExpiredFood.xaml.cs">
+      <DependentUpon>uc_ViewExpiredFood.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uc_ViewInvoices.xaml.cs">
+      <DependentUpon>uc_ViewInvoices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uc_ViewProducts.xaml.cs">
+      <DependentUpon>uc_ViewProducts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uc_ViewReceipts.xaml.cs">
+      <DependentUpon>uc_ViewReceipts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uc_ViewStocks.xaml.cs">
+      <DependentUpon>uc_ViewStocks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ViewInvoiceDetailsBy\uc_ViewInvoiceDetails.xaml.cs">
+      <DependentUpon>uc_ViewInvoiceDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ViewInvoiceDetailsBy\uc_ViewInvoiceDetailsByDate.xaml.cs">
+      <DependentUpon>uc_ViewInvoiceDetailsByDate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ViewInvoiceDetailsBy\uc_ViewInvoiceDetailsByInvoiceId.xaml.cs">
+      <DependentUpon>uc_ViewInvoiceDetailsByInvoiceId.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ViewReceiptBy\uc_ViewReceiptByDate.xaml.cs">
+      <DependentUpon>uc_ViewReceiptByDate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ViewReceiptBy\uc_ViewReceiptDetails.xaml.cs">
+      <DependentUpon>uc_ViewReceiptDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ViewReceiptBy\uc_ViewReceiptDetailsByReceiptId.xaml.cs">
+      <DependentUpon>uc_ViewReceiptDetailsByReceiptId.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\SeedData.cs" />
+    <Compile Include="Utilities\UnitOfWork.cs" />
+    <Compile Include="Utilities\Variables.cs" />
+    <Compile Include="ViewModels\ExpiredFood.cs" />
+    <Compile Include="ViewModels\Statistics.cs" />
+    <Compile Include="Windows\AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UserWindow.xaml.cs">
+      <DependentUpon>UserWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utilities\Authentication.cs" />
+    <Compile Include="Utilities\DataProvider.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Styles\Button.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\DataGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\TextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SaleView\BillForOrderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SaleView\uc_CheckAvailableStocks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SaleView\uc_CreateOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SaleView\uc_ViewAvailableStocks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SaleView\uc_ViewCustomers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SaleView\uc_ViewTodayRevenue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SaleView\ViewOrderDetailsBy\uc_ViewOrderDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SaleView\ViewOrderDetailsBy\uc_ViewOrderDetailsByDate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SaleView\ViewOrderDetailsBy\uc_ViewOrderDetailsByOrderId.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\uc_CreateInvoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\uc_CreateReceipt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\uc_UpdateProductPriceInput.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\uc_ViewExpiredFood.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\uc_ViewInvoices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\uc_ViewProducts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\uc_ViewReceipts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\uc_ViewStocks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ViewInvoiceDetailsBy\uc_ViewInvoiceDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ViewInvoiceDetailsBy\uc_ViewInvoiceDetailsByDate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ViewInvoiceDetailsBy\uc_ViewInvoiceDetailsByInvoiceId.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ViewReceiptBy\uc_ViewReceiptByDate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ViewReceiptBy\uc_ViewReceiptDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ViewReceiptBy\uc_ViewReceiptDetailsByReceiptId.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Available.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\FoodReceipt.cs" />
+    <Compile Include="Models\InvoiceModel\Invoice.cs" />
+    <Compile Include="Models\InvoiceModel\InvoiceDetail.cs" />
+    <Compile Include="Models\OrderModel\Order.cs" />
+    <Compile Include="Models\OrderModel\OrderDetail.cs" />
+    <Compile Include="Models\ProductModel\Electronic.cs" />
+    <Compile Include="Models\ProductModel\Food.cs" />
+    <Compile Include="Models\ProductModel\Porcelain.cs" />
+    <Compile Include="Models\ProductModel\Product.cs" />
+    <Compile Include="Models\ReceiptModel\Receipt.cs" />
+    <Compile Include="Models\ReceiptModel\ReceiptDetail.cs" />
+    <Compile Include="Models\Stock.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

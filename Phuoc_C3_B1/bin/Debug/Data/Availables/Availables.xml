@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Availables>
+  <Available ProductId="E102" InStock="0" />
+  <Available ProductId="P980" InStock="0" />
+  <Available ProductId="P30" InStock="0" />
+  <Available ProductId="F0023" InStock="4" />
+  <Available ProductId="E126" InStock="4" />
+</Availables>

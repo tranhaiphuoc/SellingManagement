@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FoodReceipts>
+  <Receipt FoodId="F0023" ReceiptId="PNK2" MfgDate="15/05/2022 12:00:00 AM" ExpDate="16/05/2022 12:00:00 AM" />
+  <Receipt FoodId="F0023" ReceiptId="PNK2" MfgDate="14/04/2023 12:00:00 AM" ExpDate="15/04/2023 12:00:00 AM" />
+</FoodReceipts>
